@@ -270,46 +270,48 @@ def main():
         st.text("Run Steps:")
         st.code(manager.run_steps(), line_numbers=True)
 
-    # Create an assistant and tools
-    # process 1
-    # manager.create_assistant(
-    #     name="News Summarizer",
-    #     instructions="You are a personal article summarizer Assistant who knows how to take a list of article's titles and descriptions and then write a short summary of all the news articles",
-    #     tools=[
-    #         {
-    #             "type": "function",
-    #             "function": {
-    #                 "name": "get_news",
-    #                 "description": "Get the list of articles/news for the given topic",
-    #                 "parameters": {
-    #                     "type": "object",
-    #                     "properties": {
-    #                         "topic": {
-    #                             "type": "string",
-    #                             "description": "The topic for the news, e.g. bitcoin",
-    #                         }
-    #                     },
-    #                     "required": ["topic"],
-    #                 },
-    #             },
-    #         }
-    #     ],
-    # )
-    # topic = input("Enter your topic (bitcoin):")
 
-    # # process 2
-    # manager.create_thread()
-    # # process 3
-    # manager.add_message_to_thread(
-    #     role="user", content=f"summarize the news on this topic {topic}?"
-    # )
-    # # process 4
-    # manager.run_assistant(instructions="Summarize the news")
-    # # final
-    # manager.wait_for_completion()
+## ===== command line Testing ========
+# Create an assistant and tools
+# process 1
+# manager.create_assistant(
+#     name="News Summarizer",
+#     instructions="You are a personal article summarizer Assistant who knows how to take a list of article's titles and descriptions and then write a short summary of all the news articles",
+#     tools=[
+#         {
+#             "type": "function",
+#             "function": {
+#                 "name": "get_news",
+#                 "description": "Get the list of articles/news for the given topic",
+#                 "parameters": {
+#                     "type": "object",
+#                     "properties": {
+#                         "topic": {
+#                             "type": "string",
+#                             "description": "The topic for the news, e.g. bitcoin",
+#                         }
+#                     },
+#                     "required": ["topic"],
+#                 },
+#             },
+#         }
+#     ],
+# )
+# topic = input("Enter your topic (bitcoin):")
 
-    # manager.process_messages()
+# # process 2
+# manager.create_thread()
+# # process 3
+# manager.add_message_to_thread(
+#     role="user", content=f"summarize the news on this topic {topic}?"
+# )
+# # process 4
+# manager.run_assistant(instructions="Summarize the news")
+# # final
+# manager.wait_for_completion()
 
+# manager.process_messages()
+## ==== End Command Line Testing =========
 
 if __name__ == "__main__":
     main()
