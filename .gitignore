@@ -1,4 +1,5 @@
 .env
 myenv
 __pycache__/
+notes.md
 
