@@ -10,9 +10,6 @@ from datetime import datetime
 import streamlit as st
 
 
-#### ==== Video source: https://youtu.be/SaJxbuKehpc?si=CsPzyU4OXehzMZhn ###
-### Code source: https://github.com/donwany/openai-tutorials/blob/main/gpt_weather_assistant-yt.py ###
-
 load_dotenv()
 # openai.api_key = os.environ.get("OPENAI_API_KEY")
 news_api_key = os.environ.get("NEWS_API_KEY")
@@ -80,10 +77,9 @@ def get_news(topic):
 
 class AssistantManager:
     # Static variables to store the thread and assistant IDs
-    thread_id = "thread_oeRkA9IC6zbBVEmHZQNCEAzU"
-    assistant_id = "asst_PsObkvAZre9LWLO2GHUQnaCl"
-    # thread_id = None
-    # assistant_id = None
+
+    thread_id = None
+    assistant_id = None
 
     def __init__(self, model: str = "gpt-3.5-turbo-16k"):
         self.client = openai.OpenAI()
